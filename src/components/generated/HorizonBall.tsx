@@ -52,11 +52,6 @@ const SvgHorizonBall = (props: SVGProps<SVGSVGElement>) => (
                 />
             </linearGradient>
             {/* border */}
-            <path
-                transform="scale(2)"
-                fill="url(#horizon_ball_svg__b)"
-                d="M301.333 200.333c0 41.936-33.963 75.938-75.885 76h-50.114c-41.974 0-76-34.026-76-76s34.026-76 76-76h50.083c41.935.044 75.916 34.054 75.916 76z"
-            />
         </g>
         {/* lines */}
         <path
