@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Example</title>
+    <style>
+        /* CSS 스타일을 여기에 추가할 수 있습니다 */
+        .stop1 {
+            stop-color: #3d2618;
+        }
+        .stop2 {
+            stop-color: #503723;
+        }
+        .stop3 {
+            stop-color: #9ccbe5;
+        }
+        .stop4 {
+            stop-color: #558ebb;
+        }
+        .path-stroke {
+            fill: none;
+            stroke: #FFF;
+            stroke-miterlimit: 10;
+            stroke-width: 2;
+        }
+        .text-fill {
+            fill: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlSpace="preserve"
+        width="400px"
+        height="400px"
+        viewBox="0 0 400.667 400.666"
+    >
+        <filter id="horizon_ball_svg__a" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="5" />
+            <feOffset in="blur" result="offsetBlurredAlpha" />
+            <feMerge>
+                <feMergeNode in="offsetBlurredAlpha" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <g filter="url(#horizon_ball_svg__a)">
+            <linearGradient
+                id="horizon_ball_svg__b"
+                x1="200.333"
+                x2="200.333"
+                y1="276.332"
+                y2="124.332"
+                gradientUnits="userSpaceOnUse"
+            >
+                <stop offset="0" class="stop1" />
+                <stop offset="50%" class="stop2" />
+                <stop offset="50%" class="stop3" />
+                <stop offset="100%" class="stop4" />
+            </linearGradient>
+            <path
+                fill="url(#horizon_ball_svg__b)"
+                d="M301.333 200.333c0 41.936-33.963 75.938-75.885 76h-50.114c-41.974 0-76-34.026-76-76s34.026-76 76-76h50.083c41.935.044 75.916 34.054 75.916 76z"
+            />
+        </g>
+        <path
+            class="path-stroke"
+            d="M99.667 200.457h202M187.979 187.374h25M188.167 213.499h25M188.026 241.42h25M188.167 159.374h25M180.042 173.405h40M180.042 227.499h40M170.042 255.332h60M170.042 145.333h60"
+        />
+        <g class="text-fill">
+            <path d="M166.644 169.224h2.25v7.901h-1.493v-6.488h-1.627l.87-1.413zM172.84 169.025c.577 0 1.073.142 1.491.424.417.283.739.715.967 1.297.227.582.341 1.392.341 2.43 0 1.049-.115 1.866-.347 2.449-.23.583-.542 1.012-.932 1.287-.39.273-.883.411-1.477.411s-1.094-.138-1.499-.414-.722-.695-.951-1.257-.344-1.362-.344-2.401c0-1.45.224-2.501.671-3.153.499-.715 1.192-1.073 2.08-1.073zm.035 1.429c-.253 0-.479.082-.675.244-.196.163-.347.443-.45.841s-.155.979-.155 1.746c0 .999.119 1.689.356 2.071.238.381.546.572.924.572.365 0 .654-.181.869-.542.261-.437.391-1.167.391-2.191 0-1.039-.117-1.754-.351-2.148s-.537-.593-.909-.593z" />
+        </g>
+        <!-- Add other paths and elements here as needed -->
+    </svg>
+</body>
+</html>
